@@ -79,3 +79,10 @@ const playGame = () => {
   }
 };
 playGame();
+
+const root = document.querySelector(".root");
+
+const buttonRock = document.createElement("button");
+
+const buttonPaper = document.createElement("button");
+const buttonScissors = document.createElement("button");
