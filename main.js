@@ -20,7 +20,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 const gameResultDiv = document.querySelector(".game-result");
-const score = document.querySelector("score");
+const score = document.querySelector(".score");
 
 const playRound = (humanChoice, computerChoice) => {
   if (humanChoice === computerChoice) {
