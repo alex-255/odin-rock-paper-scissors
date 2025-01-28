@@ -54,8 +54,12 @@ const playRound = (humanChoice, computerChoice) => {
     } else if (computerScore < humanScore) {
       gameResultDiv.textContent = "The winner for all rounds is HUMAN!";
     }
+
     humanScore = 0;
     computerScore = 0;
+    root.removeChild(buttonRock);
+    root.removeChild(buttonPaper);
+    root.removeChild(buttonScissors);
     let buttonNewGame = document.createElement("button");
     buttonNewGame.setAttribute("class", "button-new-game");
     buttonNewGame.textContent = "Play again";
