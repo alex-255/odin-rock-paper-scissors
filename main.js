@@ -47,6 +47,7 @@ const playRound = (humanChoice, computerChoice) => {
   }
   score.textContent =
     "Your score: " + humanScore + ". Computer score: " + computerScore + ".";
+
   if (humanScore >= 5 || computerScore >= 5) {
     if (computerScore > humanScore) {
       gameResultDiv.textContent = "The winner for all rounds is COMPUTER!";
