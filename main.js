@@ -19,6 +19,7 @@ const getComputerChoice = () => {
 let humanScore = 0;
 let computerScore = 0;
 
+const root = document.querySelector(".root");
 const gameResultDiv = document.querySelector(".game-result");
 const score = document.querySelector(".score");
 
@@ -52,6 +53,17 @@ const playRound = (humanChoice, computerChoice) => {
     } else if (computerScore < humanScore) {
       gameResultDiv.textContent = "The winner for all rounds is HUMAN!";
     }
+    humanScore = 0;
+    computerScore = 0;
+    let buttonNewGame = document.createElement("button");
+    buttonNewGame.setAttribute("class", "button-new-game");
+    buttonNewGame.textContent = "Play again";
+    root.appendChild(buttonNewGame);
+    buttonNewGame = document.querySelector(".button-new-game");
+    buttonNewGame.addEventListener("click", () => {
+      // reload the current page
+      window.location.reload();
+    });
   }
 };
 
