@@ -50,11 +50,12 @@ const playRound = (humanChoice, computerChoice) => {
 
   if (humanScore >= 5 || computerScore >= 5) {
     if (computerScore > humanScore) {
-      gameResultDiv.textContent = "The winner for all rounds is COMPUTER!";
+      gameResultDiv.textContent = "The winner for all rounds is a COMPUTER!";
     } else if (computerScore < humanScore) {
-      gameResultDiv.textContent = "The winner for all rounds is HUMAN!";
+      gameResultDiv.textContent = "The winner for all rounds is a HUMAN!";
     }
 
+    // end of game
     humanScore = 0;
     computerScore = 0;
     root.removeChild(buttonRock);
